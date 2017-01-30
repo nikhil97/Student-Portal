@@ -60,65 +60,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label for="branch" class="col-md-4 control-label">Branch</label>
-
-                            <div class="col-md-6">
-                                <select class = " form-control" id="branch" name="branch"required>
-                                    <option> select </option>
-                                    <option>CSE</option>
-                                    <option>ME</option>
-                                    <option>ECE</option>
-                                    <option>IT</option>
-                                    <option>EN</option>
-                                    <option>CE</option>
-                                    <option>MCA</option>
-                                    <option>MBA</option>
-                                </select>
-                            </div>
-
-                        </div>
-
-                        <div class="form-group">
-                            <label for="year-of-passing" class="col-md-4 control-label">Year of Passing</label>
-
-                            <div class="col-md-6">
-                                <input id="year-of-passing" type="text" class="form-control" name="year_of_passing" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="skills" class="col-md-4 control-label">Skills</label>
-
-                            <div class="col-md-6">
-                                <input id="skills" type="text" class="form-control" name="skills" >
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="certification" class="col-md-4 control-label">Certification</label>
-
-                            <div class="col-md-6">
-                                <input id="certification" type="text" class="form-control" name="certification">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="training" class="col-md-4 control-label">Training</label>
-
-                            <div class="col-md-6">
-                                <input id="training" type="text" class="form-control" name="training">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="interests" class="col-md-4 control-label">Interest</label>
-
-                            <div class="col-md-6">
-                                <input id="interests" type="text" class="form-control" name="interests">
-                            </div>
-                        </div>
-
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
