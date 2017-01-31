@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'branch','year_of_passing','skills','certification','training','interests'
+        'name', 'branch', 'year_of_passing', 'skills', 'certification', 'training', 'interests'
     ];
 
     /**
@@ -29,9 +29,12 @@ class User extends Authenticatable
 
     function setPasswordAttribute($value)
     {
-        $this->attributes['password']  = bcrypt($value);
+        $this->attributes['password'] = bcrypt($value);
     }
 
-
+    public function activity()
+    {
+        return $this->belongsToMany(Activity::class);
+    }
 
 }
