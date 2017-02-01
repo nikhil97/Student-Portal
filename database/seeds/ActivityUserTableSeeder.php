@@ -1,6 +1,9 @@
 <?php
 
+use App\Activity;
+use App\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ActivityUserTableSeeder extends Seeder
 {
@@ -12,8 +15,8 @@ class ActivityUserTableSeeder extends Seeder
     public function run()
     {
         $faker = \Faker\Factory::create();
-        $user = \App\User::all()->pluck('id')->toArray();
-        $activity = \App\Activity::all()->pluck('id')->toArray();
+        $user = User::all()->pluck('id')->toArray();
+        $activity = Activity::all()->pluck('id')->toArray();
         for ($i = 0; $i <= 100; $i++) {
             DB::table('activity_user')->insert(
                 [
