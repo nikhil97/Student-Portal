@@ -24,9 +24,10 @@ Route::get('/home', 'HomeController@index');
 
 // Routes for logged in user
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('user','UserController@index');
+    Route::get('myprofile','UserController@index');
     Route::get('user/search','UserController@search');
     Route::get('user/edit','UserController@edit');
     Route::patch('user/updated','UserController@update');
+    Route::get('/search','SearchController@search');
 });
 

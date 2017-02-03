@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
+use App\Http\Requests\UserUpdateRequest;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,15 +27,15 @@ class UserController extends Controller
         return view(('edit'),compact('user'));
     }
 
-    public function update(Request $request)
+    public function update(UserUpdateRequest $request)
     {
 
-        $id =Auth::id();
-        $user = User::find($id);
+
+        $user = Auth::user();
 
         $user->update($request->all());
 
-       return redirect('user');
+       return redirect('myprofile');
     }
 
 

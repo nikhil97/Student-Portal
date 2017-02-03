@@ -2,6 +2,7 @@
 
 use App\Activity;
 use App\User;
+use Faker\Factory;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -14,7 +15,7 @@ class ActivityUserTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = \Faker\Factory::create();
+        $faker = Factory::create();
         $user = User::all()->pluck('id')->toArray();
         $activity = Activity::all()->pluck('id')->toArray();
         for ($i = 0; $i <= 100; $i++) {
