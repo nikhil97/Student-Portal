@@ -1,5 +1,6 @@
 <?php
 
+use App\Activity;
 use Illuminate\Database\Seeder;
 
 class ActivityTableSeeder extends Seeder
@@ -15,7 +16,7 @@ class ActivityTableSeeder extends Seeder
         $type = ['project', 'competition', 'seminar', 'workshop', 'guest_lecture', 'co_curricular'];
         for ($i = 0; $i <= 100; $i++) {
 
-            \App\Activity::create(
+            Activity::create(
                 [
                     'title' => $faker->title,
                     'desc' => $faker->realText(200),
