@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 
@@ -25,6 +27,16 @@ class HomeController extends Controller
     {
         
         return view('home');
+    }
+    public function showHomePage(){
+        if(Auth::check()){
+            $activities=DB::table('activities')->orderBy('updated_at','desc')->get();
+            //dd($activities);
+            return view('home',compact('activities'));
+        }
+        else {
+            return redirect(url('/login'));
+        }
     }
 
 

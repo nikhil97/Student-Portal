@@ -38,5 +38,13 @@ class UserController extends Controller
        return redirect('myprofile');
     }
 
+    public function showProfile($user){
+        $user=User::find($user);
+        //dd($user);
+
+        return view('user', compact('user'));
+
+    }
+
 
 }

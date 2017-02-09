@@ -12,9 +12,11 @@
                 <div id="showSearchDiv" class="panel-body" style="display: none;">
                     <form class="form-group" method="get" action={{url('/search')}}>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="name" placeholder="Name" ><br>
-                            <input class="form-control" type="text" name="year_of_passing" placeholder="Year Of Passing"><br>
-                        <input class="form-control" type="text" name="skills" placeholder="Skills or Certifiacation"><br>
+                            <input class="form-control" type="text" name="name" placeholder="Name"><br>
+                            <input class="form-control" type="text" name="year_of_passing"
+                                   placeholder="Year Of Passing"><br>
+                            <input class="form-control" type="text" name="skills"
+                                   placeholder="Skills or Certifiacation"><br>
                             <input class="form-control" type="text" name="interests" placeholder="Interest"><br></div>
                         <div class="panel-body">
                             <div class="col-md-6 col-md-offset-6">
@@ -30,14 +32,19 @@
                                     <option>MBA</option>
                                 </select>
                             </div>
-
                         </div>
-
                         <button type="submit" class="btn btn-primary">GO</button>
                     </form>
-
-
                 </div>
+                <h4>All Activities</h4>
+                <ul class="list-group">
+                    @foreach($activities as  $activity)
+                        <li class="list-group-item">
+                            <a href="/user/{{$activity->user->id}}/timeline">{{$activity->user->name}}</a>
+                            <h4>{{$activity->title}}</h4>
+                            <p>{{$activity->desc}}</p>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </div>

@@ -19,12 +19,13 @@ Route::get('new','PagesController@new1');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
 
 
 // Routes for logged in user
 Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', 'HomeController@showHomePage');
     Route::get('myprofile','UserController@index');
+    Route::get('user/{user}/timeline','UserController@showProfile');
     Route::get('user/search','UserController@search');
     Route::get('user/edit','UserController@edit');
     Route::patch('user/updated','UserController@update');
